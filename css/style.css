@@ -54,12 +54,11 @@ body {
       flex: 0 0 30%; } }
   @media only screen and (max-width: 56.25em) {
     .frame {
-      flex: 0 0 40%;
-      height: 90%; } }
+      flex: 0 0 40%; } }
   @media only screen and (max-width: 41em) {
     .frame {
       flex: 0 0 80%;
-      height: 95%; } }
+      height: 88%; } }
 
 .content {
   width: 90%;

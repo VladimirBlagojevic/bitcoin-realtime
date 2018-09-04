@@ -1,0 +1,16 @@
+{
+  "name": "bitcoin",
+  "version": "1.0.0",
+  "description": "Project to practice AJAX and API-s",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "author": "Vladimir B.",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.9.3",
+    "nodemon": "^1.18.4"
+  }
+}

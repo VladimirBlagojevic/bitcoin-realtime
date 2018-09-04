@@ -1,0 +1,165 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #fff; }
+
+.container {
+  position: fixed;
+  background-color: #4848c2;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.frame {
+  flex: 0 0 26%;
+  height: 82%;
+  border: 0.5rem solid rgba(165, 165, 204, 0.4);
+  border-radius: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 75em) {
+    .frame {
+      flex: 0 0 30%; } }
+  @media only screen and (max-width: 56.25em) {
+    .frame {
+      flex: 0 0 40%;
+      height: 90%; } }
+  @media only screen and (max-width: 41em) {
+    .frame {
+      flex: 0 0 80%;
+      height: 95%; } }
+
+.content {
+  width: 90%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #3439a7;
+  border-radius: 2.5rem;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); }
+  .content__title {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 1.5px;
+    font-size: 1.5rem; }
+  .content__crypto-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly; }
+  .content__input {
+    border: none;
+    background-color: #3439a7;
+    text-align: center;
+    outline: none;
+    width: 50%;
+    font-family: "Lato", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #fff;
+    border-bottom: 2px solid rgba(165, 165, 204, 0.4);
+    margin-bottom: 1rem;
+    transition: all 0.3s; }
+    .content__input:focus {
+      border-bottom: 2px solid #fcea69; }
+  .content__input::-webkit-inner-spin-button, .content__input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .content__crypto-name {
+    font-size: 2rem;
+    letter-spacing: 1.5px; }
+  .content__crypto-full-name {
+    font-size: 1rem;
+    color: rgba(165, 165, 204, 0.6); }
+  .content__convert-box {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: #fcea69;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s; }
+  .content__convert::before {
+    color: #000;
+    font-size: 2.5rem;
+    display: block;
+    transform: translateY(0.2rem); }
+  .content__convert-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1); }
+  .content__convert-box:active {
+    transform: translateY(1px);
+    box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.1); }
+  .content__curency-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .content__money {
+    font-size: 1.8rem;
+    color: #fcea69;
+    letter-spacing: 1.5px;
+    font-weight: 300;
+    margin-bottom: 0.5rem; }
+  .content__curency-name {
+    font-size: 2rem;
+    letter-spacing: 1.5px; }
+  .content__curency-full-name {
+    font-size: 1rem;
+    color: rgba(165, 165, 204, 0.6); }
+  .content__switch-curency {
+    display: flex;
+    border-radius: 200px;
+    border: 1px solid #a5a5cc;
+    width: 90%; }
+  .content__btn {
+    display: block;
+    flex: 0 0 50%;
+    border-radius: 200px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.1rem 0;
+    color: #fff;
+    transition: all 0.3s; }
+    .content__btn--Btc {
+      background-color: #fcea69;
+      color: #000; }
+    .content__btn--Eur {
+      color: #000;
+      background-color: #fcea69; }

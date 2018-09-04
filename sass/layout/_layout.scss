@@ -1,0 +1,187 @@
+.container{
+    position: fixed;
+    background-color: $color-primary;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame{
+    flex: 0 0 26%;
+    height: 82%; 
+    border: 0.5rem solid rgba($color-primary-light,0.4);
+    border-radius: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond(tab-land){
+        flex:0 0 30%;
+    }
+
+    @include respond(tab-port){
+        flex:0 0 40%;
+        height: 90%;
+    }
+
+    @include respond(phone){
+        flex:0 0 80%;
+        height: 95%;
+    }
+
+
+
+
+}
+
+.content{
+    width: 90%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center; 
+    background-color: $color-primary-dark;
+    border-radius:  2.5rem;
+    box-shadow: $shadow-light;
+
+    &__title{
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 1.5px;
+        font-size: 1.5rem;
+    }
+
+    &__crypto-box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__input{
+        border: none;
+        background-color: $color-primary-dark;
+        text-align: center;
+        outline: none;
+        width: 50%;
+        font-family: "Lato", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: $color-white;
+        border-bottom: 2px solid rgba($color-primary-light,0.4);
+        margin-bottom: 1rem;
+        transition: all 0.3s;
+
+        &:focus{
+            border-bottom: 2px solid $color-secondary;
+        }
+    }
+
+    &__input::-webkit-inner-spin-button, 
+    &__input::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+    
+
+    &__crypto-name{
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+    }
+
+    &__crypto-full-name{
+        font-size: 1rem;
+        color: rgba($color-primary-light,0.6);
+    }
+
+    &__convert-box{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        background-color: $color-secondary;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+
+    &__convert::before{
+        color:$color-black;
+        font-size: 2.5rem;
+        display: block;
+        transform: translateY(.2rem);
+    }
+
+    &__convert-box:hover{
+        transform: translateY(-2px);
+        box-shadow: $shadow;
+    }
+
+    &__convert-box:active{
+        transform: translateY(1px);
+        box-shadow: $shadow-light;
+    }
+
+    &__curency-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__money{
+        font-size: 1.8rem;
+        color: $color-secondary;
+        letter-spacing: 1.5px;
+        font-weight: 300;
+        margin-bottom: 0.5rem;
+    }
+
+    &__curency-name{
+        font-size: 2rem;
+        letter-spacing: 1.5px;
+    }
+
+    &__curency-full-name{
+        font-size: 1rem;
+        color: rgba($color-primary-light,0.6);
+    }
+
+    &__switch-curency{
+        display: flex;
+        //align-items: center;
+        border-radius: 200px;
+        border: 1px solid $color-primary-light;
+        width: 90%;
+        
+    }
+
+    &__btn{
+        display: block;
+        flex: 0 0 50%;
+        border-radius: 200px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 1.2rem;
+        padding: 0.1rem 0;
+        color: $color-white;
+        transition: all 0.3s;
+
+
+        &--Btc{
+            background-color: $color-secondary;
+            color: $color-black;
+        }
+
+        &--Eur{
+            color:$color-black;
+            background-color: $color-secondary;
+        }
+    }
+    
+
+
+}

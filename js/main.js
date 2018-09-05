@@ -24,7 +24,7 @@ function switchCurency(event) {
             input.value='1';
         });
         
-    } else if(event.target.textContent === 'BTC'){
+    } else if(event.target.textContent === 'USD'){
         //Change UI to Bitcoin
         changeToBitcoin();
         // get bitcoin value in US Dollars from api
